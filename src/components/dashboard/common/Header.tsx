@@ -40,7 +40,16 @@
 // export default function DashboardHeader() {
 //   const [sidebarOpen, setSidebarOpen] = useState(false);
 //   const [logoutDialogOpen, setLogoutDialogOpen] = useState(false);
-//   const { data: session } = useSession();
+//   // const { data: session } = useSession();
+const session = {
+  user: {
+    firstName: "Guest",
+    lastName: "Explorer",
+    email: "guest@khabodaka.com",
+    image: { url: "https://i.pravatar.cc/150?img=21" },
+    role: "admin",
+  },
+} as any;
 
 //   //  DIRECT FAKE JSON DATA
 //   const user: UserProfile = {
