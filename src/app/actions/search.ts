@@ -2,7 +2,7 @@
 
 import { BarikoiPlace, BarikoiSearchResponse } from "@/types/barikoi";
 
-export async function searchPlaces(query: string): Promise<BarikoiPlace[]> {
+export async function searchFood(query: string): Promise<BarikoiPlace[]> {
   const apiKey = process.env.BARIKOI_API_KEY;
 
   if (!apiKey) {
@@ -22,12 +22,25 @@ export async function searchPlaces(query: string): Promise<BarikoiPlace[]> {
     );
 
     if (!response.ok) {
-      throw new Error(`Barikoi API error: ${response.statusText}`);
+        throw new Error(`Barikoi API error: ${response.statusText}`);
     }
 
     const data: BarikoiSearchResponse = await response.json();
 
-    return data.places || [];
+    // Clean and validate the data to ensure it matches BarikoiPlace interface
+    const places: BarikoiPlace[] = (data.places || []).map((place: any) => ({
+      id: place.id,
+      address: place.address,
+      area: place.area,
+      city: place.city,
+      latitude: place.latitude,
+      longitude: place.longitude,
+      pcode: place.pcode,
+      uCode: place.uCode,
+      type: place.type,
+    }));
+
+    return places;
   } catch (error) {
     console.error("Error fetching places from Barikoi:", error);
     return [];

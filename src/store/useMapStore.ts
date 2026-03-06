@@ -2,12 +2,12 @@ import { create } from "zustand";
 import { BarikoiPlace } from "@/types/barikoi";
 
 interface MapState {
-  mapInstance: any; // Using any for now as bkoi-gl types are not available
+  mapInstance: any;
   searchResults: BarikoiPlace[];
   selectedPlace: BarikoiPlace | null;
   setMapInstance: (map: any) => void;
-  setSearchResults: (results: BarikoiPlace[]) => void;
-  setSelectedPlace: (place: BarikoiPlace | null) => void;
+  setResults: (results: BarikoiPlace[]) => void;
+  selectPlace: (place: BarikoiPlace | null) => void;
 }
 
 export const useMapStore = create<MapState>((set) => ({
@@ -15,6 +15,6 @@ export const useMapStore = create<MapState>((set) => ({
   searchResults: [],
   selectedPlace: null,
   setMapInstance: (map) => set({ mapInstance: map }),
-  setSearchResults: (results) => set({ searchResults: results }),
-  setSelectedPlace: (place) => set({ selectedPlace: place }),
+  setResults: (results) => set({ searchResults: results }),
+  selectPlace: (place) => set({ selectedPlace: place }),
 }));

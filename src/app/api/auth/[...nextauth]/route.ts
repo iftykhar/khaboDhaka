@@ -1,45 +1,11 @@
 // src/app/api/auth/[...nextauth]/route.ts
 
 import NextAuth from "next-auth";
+import "next-auth";
+import "next-auth/jwt";
 import CredentialsProvider from "next-auth/providers/credentials";
 const baseUrl =
   process.env.NEXT_PUBLIC_API_URL;
-
-declare module "next-auth" {
-  interface Session {
-    user: {
-      id: string;
-      name: string;
-      email: string;
-      image: string;
-      role: string;
-    };
-    accessToken: string;
-    refreshToken: string;
-  }
-
-  interface User {
-    id: string;
-    name: string;
-    email: string;
-    image: string;
-    role: string;
-    token: string;
-    refreshToken: string;
-  }
-}
-
-declare module "next-auth/jwt" {
-  interface JWT {
-    id: string;
-    name: string;
-    email: string;
-    image: string;
-    role: string;
-    accessToken: string;
-    refreshToken: string;
-  }
-}
 
 const handler = NextAuth({
   providers: [
