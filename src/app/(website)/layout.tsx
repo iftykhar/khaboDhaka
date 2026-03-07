@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "../globals.css";
-import Navbar from "@/components/website/Common/Navbar";
-import Footer from "@/components/website/Common/Footer";
+// import Navbar from "@/components/website/Common/Navbar";
+// import Footer from "@/components/website/Common/Footer";
 
 export const metadata: Metadata = {
   title: "sktch LABS",
@@ -19,9 +19,12 @@ export default function RootLayout({
 }>) {
   return (
     <>
-      <Navbar />
+    <div className="container mx-auto px-5">
+
+      {/* <Navbar /> */}
       {children}
-      <Footer />
+      {/* <Footer /> */}
+    </div>
     </>
   );
 }
