@@ -4,11 +4,11 @@ import "../globals.css";
 // import Footer from "@/components/website/Common/Footer";
 
 export const metadata: Metadata = {
-  title: "sktch LABS",
-  description:
-  "Sketch Labs is a AI powered Book creation platform. Create your gallery book with AI in minutes.",  
+  title: "Khabo Dhaka",
+   description:
+     "Khabo Dhaka is a food delivery platform that provides delicious and healthy food to your doorstep.",
   icons:{
-    icon: "/images/logo.svg"
+    icon: "/images/khabo_dhaka.png"
   }
 };
 
