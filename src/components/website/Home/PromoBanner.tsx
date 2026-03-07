@@ -35,14 +35,13 @@ export function PromoBanner() {
   return (
     // Step 1: Container must be relative to anchor the background image
     <div className="mx-6 my-8 rounded-[32px] overflow-hidden bg-[#FFEBAD] relative min-h-[160px] flex items-center p-8 border border-yellow-200/50 shadow-sm">
-      
       {/* Step 2: Ensure text content has a higher Z-Index (z-10) so it's readable over the image */}
       <div className="space-y-3 z-10 max-w-[60%] lg:max-w-[45%]">
         <h2 className="text-3xl font-black text-gray-950 leading-tight">
           Free Delivery for 1 Month!
         </h2>
         <p className="text-sm font-bold text-gray-700/80 leading-relaxed max-w-sm">
-          You've to order at least $10 for using free delivery for 1 month.
+          You&apos;ve to order at least $10 for using free delivery for 1 month.
         </p>
       </div>
 

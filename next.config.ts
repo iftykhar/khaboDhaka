@@ -3,7 +3,7 @@ const nextConfig = {
   images: {
     domains: ["img.freepik.com", "res.cloudinary.com", "api.dicebear.com"],
   },
-  outputFileTracingRoot: "d:/React/Typescript/khaboDhaka",
+  outputFileTracingRoot: process.cwd(),
 };
 
 module.exports = nextConfig;
