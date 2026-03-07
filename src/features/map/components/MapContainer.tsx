@@ -29,9 +29,9 @@ const MapContainer = () => {
           container: mapContainerRef.current,
           center: [90.3667, 23.819],
           zoom: 15,
-          // accessToken:
-          //   "bkoi_639847758cab1425e36a0f28ce77f63285b70d51aebcc051978c6c7ae5354c26",
-          accessToken: process.env.NEXT_PUBLIC_BARIKOI_API_KEY,
+          accessToken:
+            "bkoi_639847758cab1425e36a0f28ce77f63285b70d51aebcc051978c6c7ae5354c26",
+          // accessToken: process.env.NEXT_PUBLIC_BARIKOI_API_KEY,
         });
 
         map.on("load", () => {
