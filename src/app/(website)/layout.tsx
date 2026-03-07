@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <>
-    <div className="container mx-auto px-5">
+    <div className="container mx-auto">
 
       {/* <Navbar /> */}
       {children}

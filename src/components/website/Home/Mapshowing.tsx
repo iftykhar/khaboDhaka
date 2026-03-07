@@ -113,7 +113,7 @@ const Mapshowing = () => {
         </div>
 
         {/* Reviews List */}
-        <div className="space-y-8">
+        <div className="space-y-8 py-1">
           {reviews.map((review) => (
             <div
               key={review.id}
@@ -169,7 +169,7 @@ const Mapshowing = () => {
       </div>
 
       {/* Sticky Bottom Bar */}
-      <div className="fixed bottom-0 left-0 right-0 p-6 bg-white/80 backdrop-blur-xl border-t border-gray-100/50 flex gap-4 z-50">
+      {/* <div className="fixed bottom-0 left-0 right-0 p-6 bg-white/80 backdrop-blur-xl border-t border-gray-100/50 flex gap-4 z-50">
         <Button className="flex-1 h-14 bg-orange-400 hover:bg-orange-500 text-white font-black text-lg rounded-2xl shadow-xl shadow-orange-200 transition-all hover:scale-[1.02] active:scale-95">
           BROWSE FOOD
         </Button>
@@ -180,7 +180,7 @@ const Mapshowing = () => {
         >
           <Share2 className="w-6 h-6" />
         </Button>
-      </div>
+      </div> */}
     </div>
   );
 };
