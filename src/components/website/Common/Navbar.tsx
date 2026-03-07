@@ -86,16 +86,7 @@ const UserProfile = ({ session }: { session: Session | null }) => (
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  // const { data: session, status } = useSession();
-  const session = {
-    user: {
-      name: "Guest Explorer",
-      email: "guest@khabodaka.com",
-      image: "",
-      role: "user",
-    },
-  } as any;
-  const status = "authenticated";
+  const { data: session, status } = useSession();
   const pathname = usePathname();
   const [showDropdown, setShowDropdown] = useState(false);
   const { data: contentData } = useContent({ limit: 12 });
